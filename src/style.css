@@ -15,13 +15,29 @@ body {
 
 main {
   background-color: #f5f5f5;
-  height: 400px;
+  width: 100%;
+  min-width: 500px;
+  max-width: 500px; /* Adjust to your preferred size */
+  height: 500px; /* Adjust height as needed */
   border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center; /* Center content vertically */
   align-items: center;
+  text-align: center;
+}
+
+/* General Styles for all Screens */
+.welcome-screen, .game, .game-over-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; /* Ensure full width of the main container */
+  text-align: center;
+  padding: 20px;
 }
 
 .title {
@@ -33,14 +49,14 @@ main {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   margin-top: 0;
-  text-align: center;
 }
 
+/* Dice Container Styles */
 .dice-container {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .dice-face {
@@ -68,6 +84,7 @@ main {
   font-size: 1.2rem;
   font-family: "Karla", sans-serif;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .dice-button:focus {
@@ -75,5 +92,58 @@ main {
 }
 
 .dice-button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.dice-stats{
+  margin-top: 30px;
+}
+
+/* Welcome Screen Styles */
+.start-button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035ff;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.start-button:focus {
+  outline: none;
+}
+
+.start-button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+/* Game Over Screen Styles */
+.score, .time {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.reset-button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+.reset-button:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
